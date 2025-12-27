@@ -1,0 +1,9 @@
+AR:
+---------
+received amount:
+=IF(TRIM($G2)="Received", $E2, IF(TRIM($G2)="Partial", $E2 * (0.2 + 0.6*RAND()), IF(TRIM($G2)="Open", 0, 0 ) ) )
+
+AP:
+-----
+PaidAmount:
+=IF(TRIM($G2)="Paid", $E2, IF(TRIM($G2)="Partial", $E2 * (0.2 + 0.6*RAND()), IF(TRIM($G2)="Open", 0, 0 ) ) )
